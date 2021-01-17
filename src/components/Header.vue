@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark py-4 px-5">
     <div class="container-fluid">
-      <a href="#" class="navbar-brand">DcHerors</a>
+      <a href="#" class="navbar-brand">Heros</a>
       <button
         class="navbar-toggler"
         type="button"

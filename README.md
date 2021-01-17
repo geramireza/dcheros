@@ -1,4 +1,4 @@
-# dcheros
+# vue-heros
 
 ## Project setup
 ```

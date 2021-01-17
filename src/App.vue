@@ -2,15 +2,15 @@
   <Header />
   <div class="container">
     <div class="col-md-8 offset-2 p-5">
-      <DcHeros :dcHeros="dcHeros" @remove-hero="removeHero" />
-      <AddHero :dcHeros="dcHeros" @add-hero="addHero" />
+      <heros :heros="heros" @remove-hero="removeHero" />
+      <AddHero :heros="heros" @add-hero="addHero" />
     </div>
   </div>
 </template>
 
 <script>
 import Header from "./components/Header.vue";
-import DcHeros from "./components/DcHeros.vue";
+import heros from "./components/Heros.vue";
 import AddHero from "./components/AddHero.vue";
 import getHeros from "@/reusables/getHeros";
 import addHero from "@/reusables/addHero";
@@ -19,18 +19,18 @@ import editHero from '@/reusables/editHero'
 export default {
   components: {
     Header,
-    DcHeros,
+    heros,
     AddHero,
   },
   data() {
     return {
-      dcHeros: [],
+      heros: []
     };
   },
   methods: {
     getHeros() {
       getHeros().then((data) => {
-        this.dcHeros = data;
+        this.heros = data;
       });
     },
     addHero(hero) {
@@ -47,16 +47,13 @@ export default {
   },
   mounted() {
     this.getHeros()
-
     this.emitter.on("updateHero", (hero) => 
       editHero(hero).then(data => {
         if(data.status == 200){
           this.getHeros()
         }
-      }).catch(error => console.log('gerami',error))
+      }).catch(error => console.log(error))
     );
-
-
   },
 };
 </script>

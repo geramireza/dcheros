@@ -21,7 +21,7 @@
 <script>
 export default {
   props: {
-    dcHeros: {
+    heros: {
       type: Array,
     },
   },

@@ -1,5 +1,5 @@
 {
-  "name": "dcheros",
+  "name": "vue-heros",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,8 @@
     "jquery": "^3.5.1",
     "mitt": "^2.1.0",
     "popper.js": "^1.16.1",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "vuex": "^4.0.0-rc.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss7-compat": "^2.0.2",

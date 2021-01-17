@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import store from './store/index'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'jquery/dist/jquery'
 import 'bootstrap/dist/js/bootstrap'
@@ -14,5 +15,5 @@ const emitter = mitt()
 const app = createApp(App)
 app.mixin(mixins)
 app.config.globalProperties.emitter = emitter
-
+app.use(store)
 app.mount('#app')

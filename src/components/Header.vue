@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark py-4 px-5">
+  <nav class="navbar navbar-expand-md navbar-dark bg-secondary py-4 px-5">
     <div class="container-fluid">
       <a href="#" class="navbar-brand">Heros</a>
       <button

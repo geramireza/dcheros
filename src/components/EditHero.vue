@@ -11,7 +11,7 @@
             type="text"
             class="form-control"
             :value="hero.name"
-            @keyup="checkInput"
+            @input="checkInput"
           />
         </div>
         <div class="modal-footer">
@@ -53,8 +53,8 @@ export default {
         this.emitter.emit("updateHero", newHero);
       }
     },
-    checkInput() {
-      const hero = document.querySelector("input").value;
+    checkInput(event) {
+      const hero = event.target.value;
       if (hero.trim() != "" && hero != this.hero.name) {
         this.disabled = false;
       } else {
@@ -63,7 +63,7 @@ export default {
     },
   },
 };
-</script>
+</script>f
 
 <style>
 </style>
